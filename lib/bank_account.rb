@@ -7,7 +7,8 @@ class BankAccount
     @name = name 
   end
   
-  def deposit 
+  def deposit(money) 
+    @balance += money
   end 
   
 end
