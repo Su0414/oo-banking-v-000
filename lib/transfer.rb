@@ -37,8 +37,7 @@ class Transfer
   
   def reverse_transfer 
     puts @status
-    if(@status != "reversed" 
-      || @status !="pending" || @status !="rejected")
+    if(@status != "reversed" || @status != "pending" || @status != "rejected")
         @sender.balance = @sender.balance + @amount
         @receiver.balance = @receiver.balance - @amount
         @status = "reversed"
