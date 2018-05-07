@@ -11,6 +11,15 @@ class Transfer
     @amount =  transfer_amount
   end 
   
+  def valid? 
+    if(@sender.balance == 0 || status == "closed" || amount == 0)
+        return false 
+      elsif(@receiver.balance == 0 || status == "closed" || amount == 0)
+        return false 
+      else 
+        return true 
+      end 
+  end 
   
   
   
