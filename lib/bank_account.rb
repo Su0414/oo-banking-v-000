@@ -7,4 +7,7 @@ class BankAccount
     @name = name 
   end
   
+  def deposit 
+  end 
+  
 end
