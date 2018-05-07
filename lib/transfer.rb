@@ -12,9 +12,9 @@ class Transfer
   end 
   
   def valid? 
-    if(@sender.balance == 0 || status == "closed" || amount == 0)
+    if(@sender.valid? || amount == 0)
         return false 
-      elsif(@receiver.balance == 0 || status == "closed" || amount == 0)
+      elsif(@receiver.valid? || amount == 0)
         return false 
       else 
         return true 
